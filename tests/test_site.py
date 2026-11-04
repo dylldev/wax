@@ -51,10 +51,17 @@ class HomepageTests(unittest.TestCase):
                 elif not urlsplit(value).scheme:
                     self.assertFalse(value.startswith('/'), 'Root paths break project Pages')
                     self.assertTrue((ROOT / urlsplit(value).path).is_file(), value)
-            if tag in ['script', 'iframe']:
-                self.fail('Homepage needs no scripts or embedded third-party content')
+            if tag == 'iframe':
+                self.fail('No embedded third-party content')
+            if tag == 'script':
+                self.assertEqual(attrs.get('src'), 'release.mjs')
+                self.assertEqual(attrs.get('type'), 'module')
             if tag == 'link' and attrs.get('rel') == 'stylesheet':
                 self.assertFalse(urlsplit(attrs.get('href', '')).scheme)
+
+    def test_release_updates_are_loaded_exactly_once(self):
+        scripts = [attrs for tag, attrs in self.page.elements if tag == 'script']
+        self.assertEqual(scripts, [{'type': 'module', 'src': 'release.mjs'}])
 
     def test_real_preview_images_are_described(self):
         images = [a for t, a in self.page.elements if t == 'img']

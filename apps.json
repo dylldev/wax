@@ -1,18 +1,18 @@
 {
   "name": "Wax",
   "identifier": "dev.localsigner.source",
-  "subtitle": "Local IPA inspector and signer",
-  "description": "Wax checks IPA files and manages your own signing certificates and provisioning profiles on-device.",
-  "iconURL": "https://dylankirkgirg.github.io/wax/icon.png",
+  "subtitle": "Free on-device IPA tools",
+  "description": "Legacy inspector build: inspect IPA metadata and manage certificates/profiles. This historical build does not sign or install apps.",
+  "iconURL": "https://dylldev.github.io/wax/icon.png",
   "tintColor": "8E2A24",
   "apps": [
     {
       "name": "Wax",
       "bundleIdentifier": "dev.localsigner.app",
       "developerName": "Wax",
-      "subtitle": "Inspect IPAs, manage certificates and profiles",
-      "localizedDescription": "Import an .ipa and see its real metadata: bundle id, version, minimum iOS, executable and whether signature or profile files are present. Import your own .p12 and provisioning profiles; private keys stay in the iOS Keychain and passwords are never stored.\n\nThis build does not sign or install apps yet. Signature validity and installation eligibility are never claimed.",
-      "iconURL": "https://dylankirkgirg.github.io/wax/icon.png",
+      "subtitle": "On-device IPA tools",
+      "localizedDescription": "Legacy inspector build: inspect IPA metadata and manage certificates/profiles. This historical build does not sign or install apps.",
+      "iconURL": "https://dylldev.github.io/wax/icon.png",
       "tintColor": "8E2A24",
       "screenshotURLs": [],
       "versions": [
@@ -20,15 +20,16 @@
           "version": "0.3.2",
           "buildVersion": "7",
           "date": "2026-10-13",
-          "downloadURL": "https://dylankirkgirg.github.io/wax/Wax-0.3.2.ipa",
+          "downloadURL": "https://dylldev.github.io/wax/Wax-0.3.2.ipa",
           "size": 1254084,
           "minOSVersion": "17.0",
+          "sha256": "f2afa54a7e2dbf50a72307a4ae394fa41e15ded71a67be5b71ed61174e3f9fbd",
           "localizedDescription": "Wax 0.3.2 (7)"
         }
       ],
       "version": "0.3.2",
       "versionDate": "2026-10-13",
-      "downloadURL": "https://dylankirkgirg.github.io/wax/Wax-0.3.2.ipa",
+      "downloadURL": "https://dylldev.github.io/wax/Wax-0.3.2.ipa",
       "size": 1254084
     }
   ],

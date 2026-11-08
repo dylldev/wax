@@ -1,13 +1,117 @@
 <!doctype html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Wax</title>
-<style>body{font:17px/1.5 -apple-system,system-ui,sans-serif;max-width:32rem;margin:3rem auto;padding:0 1rem;color:#1b1613;background:#ede6d8}
-img{width:96px;height:96px;border-radius:22%}a{color:#8e2a24}code{word-break:break-all}</style>
-<img src="icon.png" alt="">
-<h1>Wax</h1>
-<p>Legacy inspector build: inspect IPA metadata and manage certificates/profiles. This historical build does not sign or install apps.</p>
-<p><a href="altstore://source?url=https%3A%2F%2Fdylldev.github.io%2Fwax%2Fapps.json">Add to AltStore</a> &middot;
-<a href="sidestore://source?url=https%3A%2F%2Fdylldev.github.io%2Fwax%2Fapps.json">Add to SideStore</a></p>
-<p>Source URL: <code>https://dylldev.github.io/wax/apps.json</code></p>
-<p><a href="Wax-0.3.2.ipa">Download the .ipa</a> (0.3.2, build 7). Your sideloader must sign this distribution IPA with valid provisioning.</p>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Wax is a free, open-source IPA signer for iPhone. Import your apps, sign with your own certificate, and install on the same phone. Get Wax, setup help and honest answers.">
+  <meta name="theme-color" content="#F5EFE2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#170C0B" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="Wax · Your apps. Your iPhone.">
+  <meta property="og:description" content="Import, sign and install on iPhone. Free, open source, and made to keep the everyday stuff simple.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dylldev.github.io/wax/">
+  <title>Wax · Your apps. Your iPhone.</title>
+  <link rel="canonical" href="https://dylldev.github.io/wax/">
+  <link rel="icon" href="icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="release.mjs"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap">
+  <a class="brand" href="#main" aria-label="Wax home"><img src="icon.png" width="44" height="44" alt=""><span>Wax</span></a>
+  <nav aria-label="Main navigation">
+    <a href="#features">The app</a><a href="#setup">Get started</a><a href="#help">Help</a><a class="nav-download" href="#downloads">Get Wax <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
+<main id="main">
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="tiny-seal" aria-hidden="true">W</span> An iPhone app, for your iPhone apps.</p>
+      <h1 id="hero-title">Your apps.<br>Your <em>iPhone.</em></h1>
+      <p class="lead">Import an app. Sign it with your own certificate. Install it on the same phone.</p>
+      <p class="hero-note">Wax puts the everyday steps up front and the extra options where you need them.</p>
+      <div class="actions"><a class="button primary" href="#downloads">Get Wax <span aria-hidden="true">↓</span></a><a class="text-link" href="#setup">Your first install <span aria-hidden="true">↗</span></a></div>
+      <p class="small hero-meta">Free &amp; open source <span aria-hidden="true">·</span> iOS 17 and later</p>
+    </div>
+    <figure class="hero-figure">
+      <div class="orbit" aria-hidden="true"><span>ON YOUR PHONE</span><span>IN YOUR HANDS</span></div>
+      <div class="phone"><img src="assets/screens/sign.webp" width="640" height="1391" alt="Wax Sign screen with Choose an app, signing-file setup and optional app edits." fetchpriority="high"></div>
+      <figcaption>Real Wax, shown in the simulator.<br>Preview screens may differ from your release.</figcaption>
+    </figure>
+  </section>
+
+  <div class="principles wrap"><span>Your signing files</span><span>On-device signing</span><span>No ads or tracking</span><a href="https://github.com/dylldev/wax-signer">Open source <span aria-hidden="true">↗</span></a></div>
+
+  <section class="section wrap" id="features" aria-labelledby="features-title">
+    <div class="section-heading"><p class="eyebrow">01 / The everyday essentials</p><h2 id="features-title">Less between you<br>and your next app.</h2><p>Four sections. A clear place for each part of the job.</p></div>
+    <div class="feature-grid">
+      <article><span class="feature-number">01</span><h3>Find your apps.</h3><p>Add a source you trust or a direct IPA link. Browse and download apps from your own collection of sources.</p><span class="section-tag">Sources</span></article>
+      <article><span class="feature-number">02</span><h3>Keep them together.</h3><p>Your unsigned and signed IPAs have their own shelves. Inspect an app’s details, keep a signed copy, or install a saved signed app again.</p><span class="section-tag">IPA library</span></article>
+      <article><span class="feature-number">03</span><h3>Sign on your phone.</h3><p>Choose an IPA and your signing identity. Wax checks the app and profile before handing the signed app to iOS for installation.</p><span class="section-tag">Sign</span></article>
+      <article><span class="feature-number">04</span><h3>Set up once.</h3><p>Keep certificates, provisioning profiles and your install host in Settings. Optional edits sit under Options when you need them.</p><span class="section-tag">Settings</span></article>
+    </div>
+  </section>
+
+  <section class="showcase" aria-labelledby="showcase-title"><div class="wrap showcase-inner">
+    <div class="showcase-copy"><p class="eyebrow">A little more room to breathe</p><h2 id="showcase-title">A home for<br>your IPAs.</h2><p>Warm colors, readable rows, and the next action in reach. Built to feel at home on iPhone, in light or dark.</p><a class="text-link" href="#setup">See how it works <span aria-hidden="true">↗</span></a><p class="small">Simulator previews. Your apps and sources are yours to add; Wax includes no app catalog.</p></div>
+    <div class="screen-pair">
+      <figure><div class="phone"><img src="assets/screens/library.webp" width="640" height="1391" alt="Wax IPA library showing separate unsigned and signed shelves and a sample app." loading="lazy"></div><figcaption>Keep a copy.</figcaption></figure>
+      <figure><div class="phone"><img src="assets/screens/sources.webp" width="640" height="1391" alt="Wax Sources screen with Add a source and an empty collection." loading="lazy"></div><figcaption>Make it your collection.</figcaption></figure>
+    </div>
+  </div></section>
+
+  <section class="section wrap setup" id="setup" aria-labelledby="setup-title">
+    <div class="section-heading"><p class="eyebrow">02 / Your first install</p><h2 id="setup-title">Start here.<br>Keep it simple.</h2><p>Wax signs with files you bring. It does not issue signing certificates or provide apps.</p><aside class="note"><strong>Have these ready in Files</strong><ul><li>Your <code>.p12</code> or <code>.pfx</code> certificate and its password.</li><li>A matching <code>.mobileprovision</code> profile that includes your iPhone.</li><li>An IPA you are entitled to install.</li></ul></aside></div>
+    <ol class="steps">
+      <li><div><h3>Install Wax with your current sideloader.</h3><p>Download the standard IPA below. It is unsigned, so your existing signing tool must sign and install Wax first. Opening an IPA in Files does not install it.</p><a href="#downloads">Choose your download <span aria-hidden="true">↗</span></a></div></li>
+      <li><div><h3>Bring your signing files.</h3><p>Open <strong>Settings → Certificates &amp; profiles</strong>. Import your certificate, enter its password, then import the matching provisioning profile.</p></div></li>
+      <li><div><h3>Choose an app and an identity.</h3><p>In <strong>Sign</strong>, tap <strong>Choose an app</strong> and pick an IPA. Choose the certificate you imported. Open Options only if you want to edit the app.</p></div></li>
+      <li><div><h3>Check the install host.</h3><p>Choose <strong>This iPhone</strong> for an on-phone install. Some releases include the default host setup. Builds without it need host setup in <strong>Settings → Install host</strong> before installation.</p><a href="#install-hosts">Understand the host choices <span aria-hidden="true">↗</span></a></div></li>
+      <li><div><h3>Sign, install, open.</h3><p>Tap <strong>Sign &amp; Install</strong>, review the checks, then <strong>Continue to install</strong> when allowed. Accept the iOS prompt and keep Wax on screen while iOS takes the file. Open the installed app to confirm it works.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="download-section" id="downloads" aria-labelledby="download-title"><div class="wrap">
+    <div class="download-intro"><p class="eyebrow">03 / Take it with you</p><h2 id="download-title">A little Wax.<br>A lot of possibility.</h2><p>Choose the everyday app. Keep the toolkit optional.</p></div>
+    <div class="download-grid">
+      <article class="download-card"><div class="download-top"><img src="icon.png" width="64" height="64" alt=""><span class="badge">For everyday use</span></div><h3>Wax</h3><p>Import, sign, install, saved apps and sources. Extra app edits are tucked under Options. No probes, test buttons or developer screens.</p><a class="button primary" data-download="standard" href="https://github.com/dylldev/wax-signer/releases/download/v0.16.3/Wax-0.16.3.ipa">Download Wax <span aria-hidden="true">↓</span></a><p class="small" data-release-meta="standard">Version 0.16.3 · Unsigned IPA · iOS 17+</p><a class="small" data-checksum="standard" href="https://github.com/dylldev/wax-signer/releases/download/v0.16.3/Wax-0.16.3.ipa.sha256">SHA-256 checksum</a></article>
+      <article class="download-card dev-card"><p class="eyebrow">For testing &amp; tinkering</p><h3>Wax Dev</h3><p>The developer build adds a test app, import logs and technical signing controls. Available options vary by release.</p><p>It installs beside Wax with separate files and settings. Import your signing files into each copy you use.</p><a class="button secondary" data-download="development" href="https://github.com/dylldev/wax-signer/releases/download/v0.16.3/Wax-Dev-0.16.3.ipa">Download Wax Dev <span aria-hidden="true">↓</span></a><p class="small" data-release-meta="development">Version 0.16.3 · Unsigned IPA · iOS 17+</p><a class="small" data-checksum="development" href="https://github.com/dylldev/wax-signer/releases/download/v0.16.3/Wax-Dev-0.16.3.ipa.sha256">SHA-256 checksum</a></article>
+    </div>
+    <p class="release-note" data-dev-unavailable hidden>Dev builds are optional. <a href="https://github.com/dylldev/wax-signer/releases">Browse available Dev releases</a>.</p>
+    <p class="release-note" data-release-status role="status">Links shown are the verified 0.16.3 downloads.</p>
+    <p class="release-note">This feature guide was reviewed for Wax 0.16.3. Downloads check for new stable releases automatically; release notes cover newer changes.</p>
+    <p class="release-note">Both downloads need your existing sideloader. Want release notes or a newer build? <a data-release-notes href="https://github.com/dylldev/wax-signer/releases/latest">Check the latest release <span aria-hidden="true">↗</span></a></p>
+    <p class="release-note">Testing an upcoming version? <a data-test-releases href="https://github.com/dylldev/wax-signer/releases">Browse test prereleases and release notes <span aria-hidden="true">↗</span></a>. Test prereleases may have unfinished features or known issues. The download buttons above stay on stable releases.</p>
+  </div></section>
+
+  <section class="section wrap" id="install-hosts" aria-labelledby="hosts-title">
+    <div class="section-heading heading-inline"><div><p class="eyebrow">The last step, explained</p><h2 id="hosts-title">Signing happens here.<br>iOS handles the install.</h2></div><p>A host delivers the signed file to iOS. It does not replace your signing certificate or make an incompatible profile work.</p></div>
+    <div class="host-list">
+      <article><div><h3>This iPhone</h3><span class="badge">Default · experimental</span></div><p>Wax serves the signed app from your phone. You do not run a server. Official builds configured with a public certificate feed use it for this delivery connection; its renewal services and your network must cooperate. Builds without this feed need host setup before installation.</p></article>
+      <article><div><h3>My server</h3><span class="badge neutral">Optional</span></div><p>Deliver through your own HTTPS server. Choose this if you already run a host or need another route. <a href="https://github.com/dylldev/wax-signer/tree/main/Server/wax-ota">Server setup guide <span aria-hidden="true">↗</span></a></p></article>
+      <article><div><h3>Bucket</h3><span class="badge neutral">Experimental</span></div><p>Use an S3-compatible bucket you own. This route has limited validation and has not been verified against a real storage provider.</p></article>
+    </div>
+    <p class="small host-limit">An iOS prompt or a successful handoff does not confirm installation or launch. Always open the installed app to check.</p>
+  </section>
+
+  <section class="section wrap faq-section" id="help" aria-labelledby="help-title">
+    <div class="section-heading"><p class="eyebrow">04 / A few good answers</p><h2 id="help-title">Before you<br>get stuck.</h2><p>Keep your original IPA. Most setup problems do not need a fresh start.</p><a class="text-link" href="https://github.com/dylldev/wax-signer/issues/new?template=bug_report.md">Report a problem <span aria-hidden="true">↗</span></a></div>
+    <div class="faq-list">
+      <details><summary>Is Wax free? Do I need a computer?</summary><p>Wax is free and open source under Apache-2.0. Once you have sideloaded Wax, it can sign and deliver apps from your iPhone without a Mac or a server you operate. Your signing certificate and profile are separate requirements; Wax does not sell or supply them.</p></details>
+      <details><summary>Does it work with every iPhone and certificate?</summary><p>Wax targets iOS 17 and later. Device testing has covered an iPhone 17 on iOS 27.2; that does not guarantee every device, profile or app. The profile must match the signing certificate and include your device. Ad Hoc over-the-air installation has worked in a device test; Development certificate installs have had mixed results. Certificate readiness alone does not prove an app will install.</p></details>
+      <details><summary>How long will my signed apps last?</summary><p>That depends on the certificate, provisioning profile and Apple’s rules, not Wax. Free developer provisioning commonly lasts 7 days. Other profiles have their own expiry dates and can be revoked. Check your actual profile rather than assuming a fixed lifetime.</p></details>
+      <details><summary>What can I change before signing?</summary><p>Open Options for the edits available in your build, such as an app’s name, bundle identifier, version or icon. Available options vary by version. Current test builds also offer compression tuning in standard Wax. Wax Dev exposes technical controls, including entitlements, property-list edits, per-app profiles and library injection. An edit can affect app behavior or installation eligibility; start with the original settings.</p></details>
+      <details><summary>Why does the install prompt mention a domain?</summary><p>iOS needs an HTTPS delivery connection. “This iPhone” uses a certificate for a name that points back to the phone. That delivery certificate is shared and public; it is different from your private app-signing certificate. <a href="https://github.com/dylldev/wax-signer/blob/main/SECURITY.md">Read the security model</a>.</p></details>
+      <details><summary>Signing worked, but installation did not. What next?</summary><p>Keep Wax on screen during delivery. Check that your profile includes this iPhone and matches the selected certificate. If the download never starts, try another network or host; some networks rewrite the install name’s DNS answer. Export a retained signed IPA or retry saved-app installation when available. Do not delete your signing files as a first troubleshooting step.</p></details>
+      <details><summary>Where do apps and sources come from?</summary><p>You add them. Wax supports AltStore/Feather-style source links and direct IPA links, but ships with no sources or app catalog. Only load apps and sources you trust and are entitled to use. Signing an IPA does not prove that its contents are safe.</p></details>
+      <details><summary>How do I report a bug safely?</summary><p>Open a GitHub issue with your Wax version, iPhone model, iOS version, the step that failed and the exact error. Reports are public. Never attach certificates, profiles, passwords, tokens or private IPA files. Report security vulnerabilities privately using <a href="https://github.com/dylldev/wax-signer/security/advisories/new">GitHub’s vulnerability report</a>.</p></details>
+    </div>
+  </section>
+
+  <section class="privacy-section" id="privacy" aria-labelledby="privacy-title"><div class="wrap privacy-inner"><div><p class="eyebrow">Yours stays yours</p><h2 id="privacy-title">Your signing files.<br>Your control.</h2></div><div><p>Wax keeps your app-signing certificate and private key in the iPhone Keychain, on this device. Provisioning profiles stay in app-private storage, excluded from iCloud backups.</p><p>Wax has no ads, accounts or tracking. Signing happens on-device; app downloads, certificate-feed checks and the install host you choose use network connections. A server or bucket you select receives the file for delivery.</p><p>This website uses no analytics, cookies, remote fonts or third-party scripts. The page checks GitHub’s public API for the latest stable release. GitHub hosts the page and downloads and handles these requests under its own policies.</p><a class="text-link" href="https://github.com/dylldev/wax-signer">Read the source <span aria-hidden="true">↗</span></a></div></div></section>
+</main>
+<footer class="wrap site-footer"><a class="brand" href="#main"><img src="icon.png" width="36" height="36" alt=""><span>Wax</span></a><p>Made for the apps you bring.</p><nav aria-label="Footer"><a href="https://github.com/dylldev/wax-signer">GitHub</a><a href="https://github.com/dylldev/wax-signer/releases">Releases</a><a href="https://github.com/dylldev/wax-signer/blob/main/LICENSE">Apache-2.0</a><a href="#privacy">Privacy</a></nav></footer>
+</body>
+</html>
